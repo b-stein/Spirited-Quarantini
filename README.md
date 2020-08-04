@@ -22,7 +22,9 @@ Users can login, search cocktails by ingredient type or name, view a randomized 
 ![Login](https://media.giphy.com/media/XZrRlEYaqpQHBfrv1M/giphy.gif)
 #### Saving drinks, marking as tried
 ![App Functionality](https://media.giphy.com/media/QZ1xm7CpoHIY9361pB/giphy.gif)
-![App Functionality](https://media.giphy.com/media/TgPBFzkLkQ1rkmdHi6/giphy.gif)
+#### Exploring navigation bar
+![App Functionality](https://media.giphy.com/media/ZcWptvsH8FPxisggqQ/giphy.gif)
+#### Searching by ingredient or drink name
 ![App Functionality](https://media.giphy.com/media/TgPBFzkLkQ1rkmdHi6/giphy.gif)
 
 ## Setup
