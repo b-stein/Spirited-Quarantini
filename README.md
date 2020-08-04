@@ -34,3 +34,24 @@ $ cd food-diary
 $ npm install 
 $ npm start
 ```
+
+## Technologies Used
+- React, React Hooks
+- TypeScript
+- Jest
+- React Testing Library
+- HTML/SCSS
+
+## Systems/Practices
+- git/Version Control
+- Project Board (via [Trello](https://trello.com/b/gn0dek9h/spirited-quarantini))
+
+## Wins
+- Successfully integrating TypeScript and React Hooks into a fully functioning application
+- Maneuvering workflow with 4 teammembers remotely, with daily standups and checkins
+
+## Future Iteartions...
+- Mobile application
+- Add in more asynchronous integration tests
+- Give functionality so that users under 21 can view & interact with non-alcoholic drinks
+- Put in a backend via Express for user authentication on login
