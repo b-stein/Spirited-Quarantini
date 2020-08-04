@@ -51,7 +51,7 @@ $ npm start
 - Successfully integrating TypeScript and React Hooks into a fully functioning application
 - Maneuvering workflow with 4 teammembers remotely, with daily standups and checkins
 
-## Future Iteartions...
+## Future Iterations...
 - Mobile application
 - Add in more asynchronous integration tests
 - Give functionality so that users under 21 can view & interact with non-alcoholic drinks
