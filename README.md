@@ -19,10 +19,11 @@ Users can login, search cocktails by ingredient type or name, view a randomized 
 
 ## In Action
 #### Logging in, viewing drinks
-![Login](https://media.giphy.com/media/dwM6xd0fRfCu8cjJSY/giphy.gif)
+![Login](https://media.giphy.com/media/XZrRlEYaqpQHBfrv1M/giphy.gif)
 #### Saving drinks, marking as tried
+![App Functionality](https://media.giphy.com/media/QZ1xm7CpoHIY9361pB/giphy.gif)
 ![App Functionality](https://media.giphy.com/media/TgPBFzkLkQ1rkmdHi6/giphy.gif)
-
+![App Functionality](https://media.giphy.com/media/TgPBFzkLkQ1rkmdHi6/giphy.gif)
 
 ## Setup
 View the deployed application [here](https://spiritedquarantini.netlify.app/ )
