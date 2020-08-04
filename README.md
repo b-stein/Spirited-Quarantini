@@ -18,8 +18,9 @@ Users can login, search cocktails by ingredient type or name, view a randomized 
 - Cover application with a robust testing suite, using Jest and React Testing Library
 
 ## In Action
-### Logging in
+#### Logging in, viewing drinks
 ![Login](https://media.giphy.com/media/dwM6xd0fRfCu8cjJSY/giphy.gif)
+#### Saving drinks, marking as tried
 ![App Functionality](https://media.giphy.com/media/TgPBFzkLkQ1rkmdHi6/giphy.gif)
 
 
