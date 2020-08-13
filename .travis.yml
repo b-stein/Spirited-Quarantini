@@ -11,5 +11,5 @@ install: npm install
 script:
   - npm install
   - npm test
-  - CI=false npm run build
+  - CI= npm run build
   - npm start
