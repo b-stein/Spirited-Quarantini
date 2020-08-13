@@ -1,8 +1,10 @@
 language: node_js
 node_js:
-  - "node"
+- node
 notifications:
   email: false
 deploy:
   provider: heroku
+  api_key:
+    secure: QWrhYJDkA0KsBqAzg2rE2Lx6EqdLNs8Ay6/K2sqdjzXmKT/k+u1offU+bcWCEr3F7MtlrCimjaM4P5GAceUcGVsTHVg4gmZSvaaIb+BBTuV4Dx/fcPTTHSWQ2GdZ11K/mQC3q3hIOvVVjhrw5sjcCyPnUNWGgsUHIeOz8u7K0OazwcPoCSMW8nzVBbHQpEQmZphDu/+ZgIGQ4bWx1gXHQPbR67pXfabsIKZmzBoTv6fVj7Q6miS3Msz/Lw+PAScC1CJ0WerD073KgjBeIIosX8PcxV3xwJuLKczykOFdvHRqqgKud9tMqDYqgQwwT3cdd5ndnjylA1acNzA3l9fajF/YQ6QNmPbQV8mNMWtOMWjlE4kGw3xUX27XRnJ4jaG7Iv9g8EDYMHA3Nkt7CQxPR9pF/Cg7otWgKxChL1e4fk2RdwdCZRsC0KEzWx6uoool9/upQRr5tslIhjspkgn30nLRO8LF9P4IWX+kVZLeGyXAqeN9nWbZgn7yHJGRyvsEjCayMhpfjUEHQ6THLZ1Uxiad5cXttMZXHLC69trQC6uw7NtXQ6tt9mAj/wBN7O9fCB3P1cdOeqgzqp2znAzbZwF9tL242VBkiWS+/hi6dMrSiqo/UDMCJEH7tIx7zWJ02vsRWcPY7PW4Zm1Vy0QiEKWYwcMYHGtM6Oh+WVE8/kc=
   app: spirited-quarantini-app
