@@ -47,18 +47,8 @@ const App: React.SFC = () => {
 	useEffect(() => {getCocktail()}, []);
 	useEffect(() => {fetchAllCocktails()}, []);
 	useEffect(() => {
-		const updateAllCocktails = async ():Promise<void> => {
-			try {
-				const newCocktails = await Promise.all(
-					allCocktails.map(c => getCocktailDetails(c.idDrink))
-				);
-				setUpdatedCocktails(newCocktails);
-			} catch (error) {
-				setError(error.message);
-			}
-		}
 		updateAllCocktails();
-	}, [allCocktails]);
+	}, [allCocktails]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // API Calls
   const fetchAllCocktails = async (): Promise<any> => {
@@ -78,6 +68,17 @@ const App: React.SFC = () => {
 			setRandomCError(error.toString());
 		}
 	};
+	
+	const updateAllCocktails = async ():Promise<void> => {
+		try {
+			const newCocktails = await Promise.all(
+				allCocktails.map(c => getCocktailDetails(c.idDrink))
+			);
+			setUpdatedCocktails(newCocktails);
+		} catch (error) {
+			setError(error.message);
+		}
+	}
 
 	// Functions
 	const findResults = (searchValue: string) => {
