@@ -8,4 +8,8 @@ notifications:
 
 install: npm install
 
-CI: false npm build
+script:
+  - npm install
+  - npm test
+  - CI=false npm run build
+  - npm start
