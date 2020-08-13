@@ -47,7 +47,17 @@ const App: React.SFC = () => {
 	useEffect(() => {getCocktail()}, []);
 	useEffect(() => {fetchAllCocktails()}, []);
 	useEffect(() => {
-		updateAllCocktails()
+		const updateAllCocktails = async ():Promise<void> => {
+			try {
+				const newCocktails = await Promise.all(
+					allCocktails.map(c => getCocktailDetails(c.idDrink))
+				);
+				setUpdatedCocktails(newCocktails);
+			} catch (error) {
+				setError(error.message);
+			}
+		}
+		updateAllCocktails();
 	}, [allCocktails]);
 
   // API Calls
@@ -68,17 +78,6 @@ const App: React.SFC = () => {
 			setRandomCError(error.toString());
 		}
 	};
-
-	const updateAllCocktails = async ():Promise<void> => {
-		try {
-			const newCocktails = await Promise.all(
-				allCocktails.map(c => getCocktailDetails(c.idDrink))
-			);
-			setUpdatedCocktails(newCocktails);
-		} catch (error) {
-			setError(error.message);
-		}
-	}
 
 	// Functions
 	const findResults = (searchValue: string) => {

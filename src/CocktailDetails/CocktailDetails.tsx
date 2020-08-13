@@ -13,7 +13,7 @@ export interface CocktailDetailsProps {
 	toggleUserInteraction: (idList: Cocktail[], drinkId: string, setTheSate: Function) => any;
 }
 
-const CocktailDetails: React.FC<CocktailDetailsProps> = ({ id, favCocktails, madeCocktails, setFavCocktails, setMadeCocktails,toggleUserInteraction }) => {
+const CocktailDetails: React.FC<CocktailDetailsProps> = ({ id, favCocktails, madeCocktails, setFavCocktails, setMadeCocktails, toggleUserInteraction }) => {
   const [cocktailInfo, setCocktailInfo] = useState<Cocktail>({
     idDrink: "",
     strDrink: "",
@@ -24,14 +24,14 @@ const CocktailDetails: React.FC<CocktailDetailsProps> = ({ id, favCocktails, mad
   const [isFavorite, setIsFavorite] = useState<boolean>(favCocktails.find(c => c.idDrink === id) ? true : false);
 	const [isMade, setIsMade] = useState<boolean>(madeCocktails.find(c => c.idDrink === id) ? true : false);
 
-  const getCocktail = async (): Promise<void> => {
-    try {
-			const data: Cocktail = await getCocktailDetails(id);
-      setCocktailInfo(removeNulls(data));
-    } catch (error) {
-      setError(error.message);
-    }
-  };
+  // const getCocktail = async (): Promise<void> => {
+  //   try {
+	// 		const data: Cocktail = await getCocktailDetails(id);
+  //     setCocktailInfo(removeNulls(data));
+  //   } catch (error) {
+  //     setError(error.message);
+  //   }
+  // };
 
   const removeNulls = (info: Cocktail): Cocktail => {
     const drinkDetails: Partial<Cocktail> = {
@@ -54,7 +54,17 @@ const CocktailDetails: React.FC<CocktailDetailsProps> = ({ id, favCocktails, mad
     return cocktailIngredients.map((i) => cocktailInfo[i] as string);
   };
 
-  useEffect(() => {getCocktail()}, []);
+  useEffect(() => {
+		const getCocktail = async (): Promise<void> => {
+			try {
+				const data: Cocktail = await getCocktailDetails(id);
+				setCocktailInfo(removeNulls(data));
+			} catch (error) {
+				setError(error.message);
+			}
+		}
+		getCocktail()
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 	
 	const clickHandler = (setTheState: Function, theState: boolean, idList: Cocktail[], updateProps: Function) => {
 		setTheState(!theState);
