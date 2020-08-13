@@ -1,14 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./MyCocktails.scss";
 
 interface MyCocktailsProps {}
 
 const MyCocktails: React.SFC<MyCocktailsProps> = () => {
-  const [allCocktails, setAllCocktails] = useState({});
-
-  // NonFunctional code to connect array of cocktails
-
   return (
     <section className="my-cocktails-container">
       <section className="btn-container">

@@ -64,6 +64,7 @@ const CocktailDetails: React.FC<CocktailDetailsProps> = ({ id, favCocktails, mad
   return (
     <section className="cocktail-details-wrapper">
       <section className="cocktail-details-card">
+				{error && <div>{error}</div>}
         <h3>{cocktailInfo.strDrink}</h3>
         <img
           className="details-img"

@@ -1,15 +1,5 @@
 language: node_js
-
 node_js:
   - "node"
-
 notifications:
   email: false
-
-install: npm install
-
-script:
-  - npm install
-  - npm test
-  - CI= npm run build
-  - npm start

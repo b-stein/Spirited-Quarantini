@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { AllCocktailsDetails } from '../App/App';
 import CocktailCard from '../CocktailCard/CocktailCard';
 import { Cocktail } from '../Definitions/RandomCocktail'
