@@ -1,5 +1,4 @@
 # Spirited Quarantini
-[![Build Status](https://travis-ci.org/b-stein/Spirited-Quarantini.svg?branch=master)](https://travis-ci.org/b-stein/Spirited-Quarantini)
 ## Contributors
 - Becca Steinbrecher (GitHub: [b-stein](https://github.com/b-stein))
 - Alex Sodemann (GitHub: [asodemann18](https://github.com/asodemann18))
