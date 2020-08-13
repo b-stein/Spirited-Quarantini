@@ -13,7 +13,7 @@ export interface CocktailDetailsProps {
 	toggleUserInteraction: (idList: Cocktail[], drinkId: string, setTheSate: Function) => any;
 }
 
-const CocktailDetails: React.FC<CocktailDetailsProps> = ({ id, favCocktails, madeCocktails, setFavCocktails, setMadeCocktails,toggleUserInteraction }) => {
+const CocktailDetails: React.FC<CocktailDetailsProps> = ({ id, favCocktails, madeCocktails, setFavCocktails, setMadeCocktails, toggleUserInteraction }) => {
   const [cocktailInfo, setCocktailInfo] = useState<Cocktail>({
     idDrink: "",
     strDrink: "",
@@ -54,7 +54,9 @@ const CocktailDetails: React.FC<CocktailDetailsProps> = ({ id, favCocktails, mad
     return cocktailIngredients.map((i) => cocktailInfo[i] as string);
   };
 
-  useEffect(() => {getCocktail()}, []);
+  useEffect(() => {
+		getCocktail()
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 	
 	const clickHandler = (setTheState: Function, theState: boolean, idList: Cocktail[], updateProps: Function) => {
 		setTheState(!theState);
@@ -64,6 +66,7 @@ const CocktailDetails: React.FC<CocktailDetailsProps> = ({ id, favCocktails, mad
   return (
     <section className="cocktail-details-wrapper">
       <section className="cocktail-details-card">
+				{error && <div>{error}</div>}
         <h3>{cocktailInfo.strDrink}</h3>
         <img
           className="details-img"

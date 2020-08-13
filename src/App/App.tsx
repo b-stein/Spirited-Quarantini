@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Login from '../Login/Login';
 import Header from '../Header/Header';
@@ -47,8 +47,8 @@ const App: React.SFC = () => {
 	useEffect(() => {getCocktail()}, []);
 	useEffect(() => {fetchAllCocktails()}, []);
 	useEffect(() => {
-		updateAllCocktails()
-	}, [allCocktails]);
+		updateAllCocktails();
+	}, [allCocktails]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // API Calls
   const fetchAllCocktails = async (): Promise<any> => {
@@ -68,7 +68,7 @@ const App: React.SFC = () => {
 			setRandomCError(error.toString());
 		}
 	};
-
+	
 	const updateAllCocktails = async ():Promise<void> => {
 		try {
 			const newCocktails = await Promise.all(
@@ -98,9 +98,13 @@ const App: React.SFC = () => {
 		return updatedCocktails.filter((cocktail: Cocktail) => {
 			const values = Object.values(cocktail);
 			let result = values.find((value: string | null) => {
-					if (value) return value.toLowerCase() === keyword.toLowerCase();
+					if (value) {
+						return value.toLowerCase() === keyword.toLowerCase();
+					}
+					return null
 			})
-			if (result) return cocktail;
+			if (result) return cocktail
+			return null;
 		});
 	}
   
@@ -122,7 +126,7 @@ const App: React.SFC = () => {
 				findResults={findResults}
 				username={username}
       />
-
+			{error && <div>{error}</div>}
       <Switch>
 				<Route
 					path="/cocktails/:id"
