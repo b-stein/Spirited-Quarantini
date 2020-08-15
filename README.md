@@ -34,7 +34,7 @@ View the deployed application [here](https://spiritedquarantini.netlify.app/ )
 
 ```
 $ git clone [file path name]
-$ cd food-diary
+$ cd Spirited-Quarantini
 $ npm install 
 $ npm start
 ```
